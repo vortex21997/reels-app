@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>소용돌이 릴스 자동 게시기</title>
+<style>
+  :root { color-scheme: light dark; --bg:#ffffff; --fg:#1a1a2e; --muted:#5a5a72; --card:#f5f6fa; --accent:#30a8ff; --border:#e2e4ee; }
+  @media (prefers-color-scheme: dark){ :root{ --bg:#14141c; --fg:#eceef6; --muted:#a6a8bb; --card:#1e1e2a; --accent:#4fb3ff; --border:#2c2c3c; } }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--fg);font-family:system-ui,-apple-system,"Segoe UI","Malgun Gothic",sans-serif;line-height:1.7}
+  .wrap{max-width:720px;margin:0 auto;padding:48px 16px 80px}
+  header{border-bottom:1px solid var(--border);padding-bottom:24px;margin-bottom:28px}
+  h1{font-size:1.7rem;margin:0 0 6px}
+  .sub{color:var(--muted);margin:0}
+  h2{font-size:1.15rem;margin:32px 0 10px}
+  .card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px 20px;margin:16px 0}
+  ul{padding-left:20px;margin:8px 0}
+  li{margin:4px 0}
+  a{color:var(--accent)}
+  code{background:var(--card);border:1px solid var(--border);border-radius:6px;padding:1px 6px;font-size:.9em}
+  footer{margin-top:40px;padding-top:20px;border-top:1px solid var(--border);color:var(--muted);font-size:.9rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>소용돌이 릴스 자동 게시기</h1>
+    <p class="sub">Vortex Reels Auto Uploader · 개인용 숏폼 자동 게시 도구</p>
+  </header>
+
+  <p>이 애플리케이션은 운영자가 직접 제작한 정보성 숏폼 영상(생활·경제·건강 카드뉴스)을
+     <strong>운영자 본인 소유의 YouTube 채널 ‘소용돌이’</strong>에 매일 정해진 시간에 자동으로 올리는
+     개인용 자동화 도구입니다. 외부에 배포되지 않으며, 운영자 1명만 사용합니다.</p>
+
+  <h2>무엇을 하나요</h2>
+  <div class="card">
+    <ul>
+      <li>운영자가 만든 영상 파일을 YouTube 쇼츠로 업로드합니다.</li>
+      <li>업로드 대상이 운영자 본인 채널이 맞는지 확인합니다.</li>
+      <li>같은 영상을 Instagram·Threads에도 함께 올립니다(YouTube와 별개).</li>
+    </ul>
+  </div>
+
+  <h2>사용하는 YouTube API</h2>
+  <div class="card">
+    <ul>
+      <li><code>youtube.videos.insert</code> — 영상 업로드</li>
+      <li><code>youtube.channels.list</code> — 인증된 채널 확인(읽기 전용)</li>
+    </ul>
+    <p style="margin:8px 0 0">요청 범위: <code>youtube.upload</code>, <code>youtube.readonly</code></p>
+  </div>
+
+  <h2>실행 환경</h2>
+  <p>운영자의 개인 PC(Windows)에서 로컬로 실행되는 스크립트입니다. 호스팅된 웹 서비스가 아니며,
+     제3자 최종 사용자가 접근하는 공개 서비스가 아닙니다.</p>
+
+  <h2>개인정보 보호</h2>
+  <p>이 도구가 어떤 데이터를 다루는지는 <a href="privacy.html">개인정보처리방침</a>을 확인하세요.</p>
+
+  <footer>
+    문의: <a href="mailto:apro23c@gmail.com">apro23c@gmail.com</a><br>
+    최종 업데이트: 2026-10-19
+  </footer>
+</div>
+</body>
+</html>
